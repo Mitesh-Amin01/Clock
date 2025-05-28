@@ -61,31 +61,62 @@ body {
 
 .clock_base {
     background: rgba(0, 0, 0, 0.7);
-    padding: 40px 60px;
-    border-radius: 30px;
+    padding: 30px 50px;
+    border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    max-width: 90%;
+    width: 400px;
+    overflow-x: auto;
 }
 
 .time_lape {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.time_lape ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 0 5px;
 }
 
 .time_lape ul h1 {
     font-weight: bold;
-    font-size: 70px;
-    margin: 0 10px;
+    font-size: 50px;
+    margin: 0 5px;
     color: #ffffffaa;
 }
 
 .time_lape ul li {
     list-style: none;
-    font-size: 90px;
-    margin: 0 10px;
+    font-size: 60px;
+    margin: 0 5px;
     color: #fff;
-    text-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff;
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
     transition: all 0.3s ease-in-out;
+}
+
+.clock_base:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 600px) {
+    .clock_base {
+        padding: 20px 30px;
+        width: 90%;
+    }
+
+    .time_lape ul li {
+        font-size: 40px;
+    }
+
+    .time_lape ul h1 {
+        font-size: 40px;
+    }
 }
 ```
 
